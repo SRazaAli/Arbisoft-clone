@@ -1,0 +1,196 @@
+/* banner */
+.banner h1{
+    font-size: 60px;
+    color: #223554;
+}
+.banner p{
+    font-size: 21px;
+    color: #223554;
+}
+.banner button{
+    font-size: 18px;
+    color: #ffffff;
+    padding: 8px 22px ;
+    background-color: #0A76D8;
+    border-radius: 40px;
+}
+
+@media (max-width:1200px) {
+    .banner h1{
+        padding-top: 30px;
+        font-size: 40px;
+    }
+    .banner p{
+        font-size: 18px;
+    }
+    .banner button{
+        font-size: 14px;
+    }
+}
+
+/* case study */
+.case-study{
+    margin: 90px 0px 100px 0px;
+}
+.case-study h1{
+    font-size: 24px;
+    color: #0A76D8;
+}
+.case-study p{
+    font-size: 18px;
+    color: #223554;
+}
+.case-study button{
+    background-color: #0A76D8;
+    color: #ffffff;
+    padding: 9px 22px;
+    border-radius: 30px;
+}
+.case-study .text{
+    margin: auto;
+}
+@media (max-width:1200px) {
+    .case-study h1{
+        padding-top: 20px;
+        font-size: 22px;
+    }
+    .case-study p{
+        font-size: 14px;
+    }
+    .case-study button{
+        padding: 7px 20px;
+    }
+}
+
+/* arbisoft perks */
+.perks-parent{
+    background-color: #F8F8F8;
+    margin-bottom: 130px;
+}
+.perks h1{
+    font-size: 45px;
+    color: #223554;
+}
+.perks p{
+    font-size: 18px;
+    color: #223554;
+}
+.perks .perk-card{
+    border-radius:0px ;
+}
+.perks .perk-card h2{
+    font-size: 31px;
+    color: #223554;
+}
+.perks .perk-card p{
+    font-size: 14px;
+    color: #223554;
+}
+
+@media (max-width:1200px) {
+    .perks h1{
+        font-size: 35px;
+    }
+    .perks p{
+        font-size: 14px;
+    }
+    .perks .perk-card{
+        margin-top: 20px;
+    }
+    .perks .perk-card h2{
+        font-size: 26px;
+    }
+    .perks .perk-card p{
+        font-size: 12px;
+    }
+    }
+
+/* expertise section */
+.btn-down{
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    background: #0d3f8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    /* top: 507px; */
+    bottom: -75px;
+    transform: translateX(-50%);
+    z-index: 11;
+}
+.btn-down svg{
+    transform: rotate(90deg);
+}
+.expertise-parent{
+    position: relative;
+    overflow: hidden;
+}
+.expertise-parent::before{
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    left: -100px;
+    right: -100px;
+    height: 890px;
+    z-index: -1;
+    border-radius: 100% 100% 0 0;
+    background: #f8f8f8;
+    margin-top: 100px;
+}
+.expertise{
+    padding-top: 210px;
+}
+.expertise h1{
+    font-size: 45px;
+    color: #223554;
+}
+.expertise .perk-card{
+    border-radius:0px ;
+}
+.expertise .perk-card h2{
+    font-size: 31px;
+    color: #223554;
+}
+.expertise .perk-card p{
+    font-size: 14px;
+    color: #223554;
+}
+
+@media (max-width:1200px) {
+    .expertise-parent::before{
+        height: 100%;
+    }
+.expertise h1{
+    font-size: 35px;
+}
+.expertise .perk-card h2{
+    font-size: 26px;
+}
+.expertise .perk-card p{
+    font-size: 12px;
+}
+}
+
+@media (max-width:992px) {
+    .expertise h1{
+        text-align: center;
+    }
+}
+
+@media(min-width:992px){
+    .lifted-div{
+        position: relative;
+        top: -167px;
+    }
+}
+/* custom width class */
+@media (min-width: 992px) {
+        .custom-width-lg-75 {
+          width: 75%;
+        }
+}
+
+

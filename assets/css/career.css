@@ -1,0 +1,20 @@
+.our-culture h1{
+    font-size: 45px;
+    color: #223554;
+}
+.our-culture p{
+    font-size: 18px;
+    color: #223554;
+    padding: 0px 200px;
+}
+@media (max-width:1400px) {
+    .our-culture img{
+        width: 170px;
+    }
+    
+}
+@media (max-width:768px) {
+    .our-culture img{
+        width: 100px;
+    }
+}

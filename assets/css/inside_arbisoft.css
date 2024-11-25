@@ -1,0 +1,60 @@
+.life-at-arbisoft{
+    padding: 120px 0px;
+}
+.life-at-arbisoft h1{
+    color: #223554;
+    font-size: 45px;
+}
+.arbisoft{
+    background-image: url(../img/life_at_arbisoft.webp);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+.arbisoft h1{
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.arbisoft p{
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.arbisoft button{
+    background-color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 40px;
+    border: 1px solid #0D3F8A;
+    color: #0D3F8A;
+    padding: 10px 35px;
+}
+
+@media (max-width:992px) {
+    .custom-width-row{
+        width: 100%;
+    }
+    .life-at-arbisoft h1{
+        font-size: 35px;
+    }   
+    .arbisoft{
+        margin: 10px 0px ;
+    }
+}
+@media (max-width:576px) {
+    .life-at-arbisoft h1{
+        font-size: 28px;
+    }   
+    .arbisoft h1{
+        font-size: 28px;
+    }
+    .arbisoft p{
+        font-size: 12px;
+    }
+    .arbisoft button{
+        font-size: 12px;
+        padding: 8px 30px;
+    }
+}
+@media (min-width:992px) {
+    .custom-width-row{
+        width: 70%;
+    }
+}

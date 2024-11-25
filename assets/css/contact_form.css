@@ -1,0 +1,117 @@
+/* contact form */
+.contact-form h1{
+    font-size: 55px;
+    line-height: 72px;
+    color: #223554;
+}
+.contact-form p{
+    font-size: 19px;
+    color: #223554;
+}
+.contact-form img{
+    width: 200px;
+}
+
+
+
+.custom-form,option{
+    /* max-width: 600px; */
+    font-size: 16px;
+    color: #6A6A87;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    width: 98%;
+    padding: 10px;
+    background-color: #3D76DB;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0D3F8A;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+/* what happens next */
+.happens-next h3{
+    font-size: 28px;
+    color: #223554;
+    margin: 0px 0px 30px ;
+}
+.happens-next ol li{
+    font-size: 20px;
+    padding: 0px 0px 16px ;
+    color: #223554;
+}
+
+/* media querries */
+@media (max-width:1200px) {
+    .contact-form h1{
+        font-size: 45px;
+        line-height: 62px;
+    }   
+    .contact-form p{
+        font-size: 18px;
+    }
+}
+@media (max-width:576px) {
+    .contact-form h1{
+        font-size: 35px;
+        line-height: 42px;
+    }   
+    .contact-form p{
+        font-size: 14px;
+    }
+    .happens-next ol li{
+        font-size: 16px;
+    }
+}
