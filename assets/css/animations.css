@@ -1,0 +1,156 @@
+/* index page */
+
+.logos img,.people img{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.logos img:hover{
+    transform: scale(1.2);
+}
+.people img:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* what we do */
+/* Base styles for the service card */
+.service-card {
+    position: relative;
+    overflow: hidden; /* Ensures the circle doesn't spill out of the card */
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover {
+    transform: scale(1.03); /* Subtle scale effect for the card */
+  }
+  /* Circle effect */
+  .circle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(49, 93, 169, 0.1); /* Purplish circle */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Content within the card */
+  .service-card img,
+  .service-card h1,
+  .service-card p,
+  .service-card a {
+    position: relative;
+    z-index: 1; /* Ensure content is above the circle */
+  }
+ 
+
+
+  /* web_development */
+  /* Base styles for the perk card */
+.perk-card,.brands-card {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1rem;
+  }
+  
+  /* Underline element */
+  .perk-card::after,.brands-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    width: 0%; /* Start with no width */
+    height: 4px; /* Thickness of the underline */
+    background-color: #3D76DB; /* Blue color */
+    transition: width 0.4s ease; /* Smooth transition */
+  }
+  
+  /* Hover effect */
+  .perk-card:hover::after,.brands-card:hover::after {
+    width: 100%; /* Expand underline to full width */
+  }
+  /* Style for the image inside the banner */
+.banner img {
+    transition: transform 0.5s ease-in-out; /* Smooth zoom transition */
+    will-change: transform; /* Optimize for performance */
+  }
+  
+  /* Zoom-in effect on hover */
+  .banner img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+  }
+
+
+ /* career */
+ /* Base styles for images */
+.our-culture img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+    transform-origin: center; /* Scale from the center */
+  }
+  
+  /* On hover */
+  .our-culture img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  /* Optional: Add a slight rotation effect */
+  .our-culture img:hover {
+    transform: scale(1.1) rotate(1deg); /* Scale and rotate slightly */
+  }
+
+  /* life at arbisoft */
+  .blogs-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .blogs-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .blogs-card img {
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth parallax zoom */
+  }
+
+  .blogs-card:hover img {
+    transform: scale(1.15); /* Parallax zoom effect */
+  }
+
+  .blogs-card .p-4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Transparent dark background for text */
+    color: #fff;
+    transform: translateY(100%); /* Hidden by default */
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .blogs-card:hover .p-4 {
+    transform: translateY(0); /* Slide in when hovered */
+  }
+
+  .blogs-card .nunito-sans,
+  .blogs-card .roboto-slab-600 {
+    margin: 0;
+  }
+
+  .blogs-card .nunito-sans {
+    font-size: 14px;
+    color: #ddd;
+  }
+
+  .blogs-card .roboto-slab-600 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fff;
+  }

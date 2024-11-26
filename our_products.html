@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/who_we_work_with.css">
     <link rel="stylesheet" href="assets/css/what_we_do.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -240,6 +241,45 @@
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+          const cards = document.querySelectorAll(".service-card");
+        
+          cards.forEach(card => {
+            card.addEventListener("mouseenter", (e) => {
+              // Create the circle element
+              const circle = document.createElement("div");
+              circle.classList.add("circle");
+        
+              // Get the mouse position relative to the card
+              const rect = card.getBoundingClientRect();
+              const x = e.clientX - rect.left; // Mouse X within the card
+              const y = e.clientY - rect.top;  // Mouse Y within the card
+        
+              // Set the circle's initial position
+              circle.style.top = `${y}px`;
+              circle.style.left = `${x}px`;
+        
+              // Append the circle to the card
+              card.appendChild(circle);
+        
+              // Trigger the growth animation
+              setTimeout(() => {
+                circle.style.width = "300%";
+                circle.style.height = "300%";
+                circle.style.opacity = "0.3";
+              }, 10);
+        
+              // Remove the circle on mouse leave
+              card.addEventListener("mouseleave", () => {
+                circle.remove();
+              });
+            });
+          });
+        });
+        
+        </script>
 
 </body>
 

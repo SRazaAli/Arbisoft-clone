@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A Global Software Product Development Services Company</title>
   <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="">
@@ -141,12 +142,14 @@
   <!-- carousel end -->
 
   <!-- jorney section start -->
+   
   <h1 class="roboto-slab-600 text-center pt-5 pb-2 journey-heading">A Journey of <span>15 years</span></h1>
-  <div class="container-fluid journey-parent my-5 d-flex justify-content-center">
+
+  <div class="container-fluid journey-parent my-5 d-flex justify-content-center" id="journey-container">
     <div class="row justify-content-center w-100">
       <div class="col-lg-2 col-md-3 journey-item border-start-0 ">
         <img src="assets/img/icon-people.svg" class="mt-4 " alt="icon-people">
-        <h2 class="roboto-slab-600 fs-1 text-center pt-3 mb-0">900+</h2>
+        <h2 class="roboto-slab-600 fs-1 text-center pt-3 mb-0 counter" data-target="900">0</h2>
         <p class="nunito-sans fs-6 text-center">People onboard</p>
       </div>
       <div class="col-lg-2 col-md-3 journey-item  ">
@@ -156,7 +159,7 @@
       </div>
       <div class="col-lg-2 col-md-3 journey-item  ">
         <img src="assets/img/icon-bulb.svg" class="mt-4" alt="icon-people">
-        <h2 class="roboto-slab-600 fs-1 text-center pt-3 mb-0">550+</h2>
+        <h2 class="roboto-slab-600 fs-1 text-center pt-3 mb-0 counter" data-target="550">0</h2>
         <p class="nunito-sans fs-6 text-center">Projects completed</p>
       </div>
       <div class="col-lg-2 col-md-3 journey-item  ">
@@ -290,7 +293,7 @@
     </div>
   </div>
 
-  <div class="container w-75 mt-5 py-2">
+  <div class="container w-75 mt-5 py-2 logos">
     <div class="row">
       <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex align-items-center justify-content-center py-2">
         <img src="assets/img/accomplishments_microsoft.svg" alt="Microsoft Logo" class="img-fluid">
@@ -419,6 +422,47 @@
   <script src="assets/bootstrap/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".counter");
+        const container = document.getElementById("journey-container");
+    
+        const animateCounters = () => {
+          counters.forEach(counter => {
+            const updateCounter = () => {
+              const target = +counter.getAttribute("data-target");
+              const current = +counter.innerText;
+              const increment = Math.ceil(target / 100); // Adjust speed here
+    
+              if (current < target) {
+                counter.innerText = current + increment;
+                setTimeout(updateCounter, 20); // Adjust timing here
+              } else {
+                counter.innerText = target; // Ensure it ends at the target
+              }
+            };
+    
+            updateCounter();
+          });
+        };
+    
+        // Intersection Observer setup
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounters(); // Start animation
+              observer.unobserve(container); // Stop observing after triggering
+            }
+          });
+        });
+    
+        observer.observe(container);
+      });
+    </script>
+    
+
+    
 
 </body>
 
